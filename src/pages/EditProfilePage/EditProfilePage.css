@@ -1,0 +1,26 @@
+.edit-profile-inputs-container {
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 15px;
+}
+
+.input-container {
+  width: 100%;
+  position: relative;
+}
+
+.error-message {
+  color: rgb(255, 92, 92);
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: -3px;
+  margin-bottom: -3px;
+}
+
+.error {
+  border: 1px solid rgb(255, 92, 92);
+  background-color: rgb(255, 196, 196);
+}

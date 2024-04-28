@@ -1,0 +1,8 @@
+.logo {
+  cursor: pointer;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: rgb(37, 37, 37);
+  text-decoration: none;
+}

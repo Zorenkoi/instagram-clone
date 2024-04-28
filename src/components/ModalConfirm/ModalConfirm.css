@@ -1,0 +1,17 @@
+.modal-confirm-body {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  display: grid;
+  row-gap: 20px;
+  cursor: auto;
+}
+
+.modal-confirm-question {
+  color: black;
+}
+.modal-confirm-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

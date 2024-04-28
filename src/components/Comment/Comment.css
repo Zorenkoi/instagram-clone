@@ -1,0 +1,6 @@
+.comment {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  column-gap: 10px;
+}

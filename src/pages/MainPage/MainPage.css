@@ -1,0 +1,5 @@
+.main-page {
+  padding: 20px 0px;
+  display: grid;
+  row-gap: 20px;
+}

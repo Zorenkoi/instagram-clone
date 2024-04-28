@@ -1,0 +1,7 @@
+.input-container {
+  width: 100%;
+  display: grid;
+  row-gap: 5px;
+}
+.input-label {
+}
