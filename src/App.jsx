@@ -16,6 +16,7 @@ import AddPostPage from "./pages/AddPostPage/AddPostPage";
 import AnimateModalPost from "./components/ModalPost/ModalPost";
 import AddUserPage from "./pages/AddUserPage/AddUserPage";
 import ChooseUserList from "./components/ChooseUserList/ChooseUserList";
+import ModalConfirm from "./components/ModalConfirm/ModalConfirm";
 
 function App() {
   const dispatch = useDispatch();
@@ -43,6 +44,7 @@ function App() {
     <BrowserRouter>
       <AnimateModalPost />
       <ChooseUserList />
+      <ModalConfirm />
 
       <Layout>
         <Routes>

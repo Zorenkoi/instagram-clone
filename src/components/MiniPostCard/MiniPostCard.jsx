@@ -15,6 +15,7 @@ import commentsImg from "../../images/comments-white.svg";
 import trashImg from "../../images/trash-white.svg";
 
 import "./MiniPostCard.css";
+import { openModalConfirm } from "../../redux/slices/modalConfirmSlice";
 
 const MiniPostCard = ({
   i,
@@ -73,21 +74,17 @@ const IconWithCount = ({ children, count }) => {
 
 const DeletePostButton = ({ postId }) => {
   const dispatch = useDispatch();
-  const [isOpen, setIsOpen] = useState(false);
 
   const handleDelete = () => dispatch(deletePost({ postId }));
-  return (
-    <>
-      <ModalConfirm
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-        question="Ви дійсно хочете видалити цей пост?"
-        confirm={handleDelete}
-      />
+  const handleOpen = () =>
+    dispatch(
+      openModalConfirm({
+        question: "Ви дійсно хочете видалити цей пост?",
+        confirm: handleDelete,
+      })
+    );
 
-      <ButtonIcon iconImg={trashImg} onClick={() => setIsOpen(true)} />
-    </>
-  );
+  return <ButtonIcon iconImg={trashImg} onClick={handleOpen} />;
 };
 
 export default MiniPostCard;

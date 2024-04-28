@@ -1,30 +1,28 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { modalWrapperAnimation, modalAnimation } from "../../animations";
 import "./ModalConfirm.css";
+import { useDispatch, useSelector } from "react-redux";
+import { closeModalConfirm } from "../../redux/slices/modalConfirmSlice";
 
-const ModalConfirm = ({
-  isOpen,
-  setIsOpen,
-  question,
-  confirm,
-  cancel = () => {},
-}) => {
-  const openModal = () => setIsOpen(true);
-  const closeModal = () => setIsOpen(false);
+const ModalConfirm = () => {
+  const dispatch = useDispatch();
+  const { cancel, confirm, isOpen, question } = useSelector(
+    (state) => state.modalConfirmReducer
+  );
+  const closeModal = () => dispatch(closeModalConfirm());
 
   const handleClose = (e) => {
-    e.stopPropagation();
     closeModal();
   };
 
   const handleConfirm = (e) => {
     e.stopPropagation();
-    confirm();
+    if (confirm) confirm();
     closeModal();
   };
   const handleCancel = (e) => {
     e.stopPropagation();
-    cancel();
+    if (cancel) cancel();
     closeModal();
   };
 

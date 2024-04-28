@@ -3,6 +3,7 @@ import postsReducer from "./slices/postsSlice";
 import usersReducer from "./slices/usersSlice";
 import modalReducer from "./slices/modalSlice";
 import modalUsersReducer from "./slices/modalUsersSlice";
+import modalConfirmReducer from "./slices/modalConfirmSlice";
 
 const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ const store = configureStore({
     usersReducer,
     modalReducer,
     modalUsersReducer,
+    modalConfirmReducer,
   },
 });
 
