@@ -33,14 +33,23 @@ function sortPosts({ posts, sortType }) {
   const clonePosts = structuredClone(posts);
 
   switch (sortType) {
-    case "popular":
+    case "likes":
       return clonePosts.sort((a, b) => {
         return b.likes.length - a.likes.length;
       });
+    case "comments":
+      return clonePosts.sort((a, b) => {
+        return b.comments.length - a.comments.length;
+      });
 
-    case "date":
+    case "newest":
       return clonePosts.sort((a, b) => {
         return new Date(b.dateString) - new Date(a.dateString);
+      });
+
+    case "oldest":
+      return clonePosts.sort((a, b) => {
+        return new Date(a.dateString) - new Date(b.dateString);
       });
 
     default:

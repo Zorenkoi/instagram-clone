@@ -4,3 +4,28 @@
   padding: 0px 10px;
   border: 1px solid rgb(194, 194, 194);
 }
+
+.sort-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 10px;
+  flex-wrap: wrap;
+}
+.sort-item {
+  padding: 5px 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.sort-item:hover {
+  background-color: #c2c2c2;
+}
+.sort-item.active {
+  background-color: #2525c6;
+  border: 1px solid white;
+  color: white;
+}
